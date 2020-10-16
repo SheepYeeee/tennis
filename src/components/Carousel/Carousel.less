@@ -1,0 +1,86 @@
+@import '../../mixin/main.less';
+
+.carousel{
+
+    .typeBox{
+        // display: block;
+        // overflow-x: auto;
+        // white-space: nowrap;
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        -ms-overflow-style: -ms-autohiding-scrollbar; 
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .type{
+        display: inline;
+        flex: 0 0 auto;
+    }
+    .imgtop{
+        display: inline-block;
+        
+        width:210px;
+        text-align: center;
+        line-height:100px;
+        color: #fff;
+        text-shadow: black 0.1em 0.1em 0.2em;
+        font-size: 25px;
+        opacity: 0.3;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        
+
+        @media (max-width: 1110px) {
+            width: 130px;
+        }
+        @media (max-width: 670px) {
+            width: 100px;
+        }
+        @media (max-width: 390px) {
+            width: 145px;
+        }
+        @media (max-width: 325px) {
+            width: 115px;
+        }
+        @media (max-width: 300px) {
+            width: 100px;
+        }
+
+    }
+    .slick-current .imgtop{
+        opacity: 0.8;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    
+}
+
+.prev{
+    top: 70px;
+    right: 15px;
+    z-index: 3;
+}
+.next{
+    left: 15px;
+    top: 70px;
+    right: 10px;
+    z-index: 3;
+    float: right;
+}
+
+.intro{
+    margin-top: 0.5em;
+}
+.typeTitle{
+    text-align: center;
+    margin-bottom: 0.5em;
+    font-size: 28px;
+}
+.typeContext{
+    text-align: center;
+    margin-bottom: 1em;
+}

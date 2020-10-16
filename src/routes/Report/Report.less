@@ -1,0 +1,55 @@
+@import '../../mixin/main.less';
+
+
+/////////
+//Report.less
+/////////
+.report {
+    margin: 20px 5%;
+    @media (max-width: @lg ) {
+        & {
+            margin: 20px 1em;
+        }
+    }
+    @media (max-width: @md ) {
+        & {
+            margin: 20px 0;
+        }
+    }
+    .report-table{
+        // overflow-x: auto;
+        .ant-dropdown-trigger svg{
+            color: inherit;
+        }
+        .ant-table-row {
+            background-color: #fff;
+            .viewBtn svg{
+                color: #fff;
+            }
+        }
+        .table-unfold{
+            .tableUnfold-div{
+                margin-bottom: 1em;
+                .tableUnfold-title{
+                    font-size: 1em;
+                    font-weight: initial;
+                    margin-top: 0.5em;
+                    margin-bottom: 0;
+                }
+                .tableUnfold-commentUser{
+                    display: inline-block;
+                    font-size: 1em;
+                    font-weight: initial;
+                    margin-right: 3px;
+                    margin-top: 0.5em;
+                }
+                .tableUnfold-text{
+                    max-width: 80vw;
+                    font-size: 1.5em;
+                    font-weight: bold;
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}

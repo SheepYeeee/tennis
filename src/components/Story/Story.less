@@ -1,0 +1,268 @@
+@import '../../mixin/main.less';
+
+@height-storyCard : calc(~'100vh / 3 * 2');
+@width-storyCard : calc(@height-storyCard/16*9);
+
+.stories {
+    cursor: -webkit-grab;
+    cursor: grab;
+    .scroll-container{
+        width: 100%;
+        display: inline-flex;
+    }
+    .addStory{
+        display: inline-block;
+        margin: 1em;
+        cursor: pointer;
+        border-radius: 50%;
+    }
+    .story {
+        display: inline-block;
+        margin: 1em;
+        background: -webkit-linear-gradient(left top, crimson 0%, #f90 100%);
+        border-radius: 50%;
+        padding: 5px;
+        cursor: pointer;
+    }
+    .story .ant-avatar{
+        background: black;
+    }
+    .showStory{
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 1000;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.9);
+        .storyTagBox{
+            width: 120px;
+            position: relative;
+            top: calc(@height-storyCard*(-1));
+            left: calc(~'50vw + '@width-storyCard/2);
+            padding-left: 10px;
+            color: #fff;
+            @media (mix-width: 767px ) {
+                & {
+                    top: 0;
+                    left: calc(~'50vw - '@width-storyCard/2);
+                }
+            }
+            .storyTagBox-label{
+                margin-right: 5px;
+            }
+        }
+    }
+    .showAddStory{
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 1000;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.9);
+    }
+    .ant-btn-icon-only {
+        font-size: 17px;
+    }
+    .storyCard{
+        margin: 0 auto;
+        margin-top: calc((100vh - @height-storyCard)/2);
+        padding: 1em;
+        height: @height-storyCard;
+        width: @width-storyCard ;
+        background-color: #fff;
+        position: relative;
+        border-radius: 5px;
+        background-size: Contain;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    .storyInfo {
+        color: #000;
+    }
+    .addStoryInfo{
+        position: relative;
+        height: 90%;
+        text-align: center;
+        font-size: 1em;
+        background-size: Contain;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    .image{
+        opacity: 0;
+        position: absolute;
+        z-index: 1;
+        left: 0;
+        top: 0;
+    }
+    #uploadItem{
+        display: block;
+        position: relative;
+    }
+    .addStoryInfo p {
+        font-size: 0.8em;
+    }
+    #btnRow{
+        display: none;
+        position: absolute;
+        left: 2em;
+        right: 2em;
+        bottom: 1em;
+        text-align: center;
+    }
+    .tagBox{
+        position: fixed;
+        top: 0;
+        margin-top: 100px;
+        left: 65%;
+        color: #fff;
+        @media (max-width: 970px) {
+            & {
+                left: 68%;
+            }
+        }
+        @media (max-width: 670px) {
+            & {
+                left: 75%;
+            }
+        }
+        @media (max-width: 490px) {
+            & {
+                top: -7em;
+                margin-bottom: 1em;
+                left: 8em;
+                right: 8em;
+                width: 300px;
+            }
+        }
+        @media (max-width: 400px) {
+            & {
+                top: -7em;
+                margin-bottom: 1em;
+                left: 5em;
+                right: 5em;
+                width: 300px;
+            }
+        }
+        @media (max-width: 360px) {
+            & {
+                top: -7em;
+                margin-bottom: 1em;
+                left: 3em;
+                right: 3em;
+                width: 300px;
+            }
+        }
+        .box {
+            margin-bottom: 1em;
+            .tagBox-text{
+                width: 80px;
+                display: inline-flex;
+            }
+            .tagBox-select-type, .tagBox-select-tag{
+                width: 100px;
+            }
+        }
+    }
+    .tags{
+        margin-bottom: 5px;
+        width: 200px;
+        @media (max-width: 490px) {
+            & {
+                top: 0;
+                margin-top: 1.5em;
+                width: 300px;
+            }
+        }
+    }
+    .storyCircle p{
+        max-width: 60px;
+        text-align: center;
+        margin: 0 auto;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+    .model-textArea{
+        margin-top: 15px;
+    }
+    .ant-tag{
+        margin: 5px;
+    }
+    .userAvatar{
+        margin-bottom: 0.25em;
+        margin-right: 1em;
+    }
+    .userName{
+        display: inline;
+        font-size: 1.3em;
+    }
+    .progress{
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        padding: 1em;
+    }
+    .beRight{
+        margin-top: 0.5em;
+        float: right;
+    }
+    .cardBtn{
+        position: relative;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 1003;
+        height: 100%;
+    }
+    .closeBtn{
+        position: fixed;
+        top: 0;
+        right: 0;
+        font-size: 1.8em;
+        color: #fff;
+        margin: 5px 10px;
+        z-index: 2000;
+    }
+    small{
+        margin-left: 1em;
+        color: gray;
+    }
+    .nextBtn{
+        position: fixed;
+        bottom: 40%;
+        right: 10%;
+        font-size: 1.8em;
+        color: #fff;
+        margin: 5px 10px;
+
+        @media (max-width: @sm) {
+            & {
+                right: 0;
+            }
+        }
+    }
+    .prevBtn{
+        position: fixed;
+        bottom: 40%;
+        left: 10%;
+        font-size: 1.8em;
+        color: #fff;
+        margin: 5px 10px;
+        @media (max-width: @sm) {
+            & {
+                left: 0;
+            }
+        }
+    }
+}
+.stories:active {
+    cursor: -webkit-grabbing;
+    cursor: grabbing;
+}

@@ -1,0 +1,157 @@
+@import '../../mixin/main.less';
+
+
+@height-storyCard : calc(~'100vh / 3 * 2');
+@width-storyCard : calc(@height-storyCard/16*9);
+.oneStory {
+    
+    .showStory{
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 1000;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.9);
+        .storyTagBox{
+            width: 120px;
+            position: relative;
+            top: calc(@height-storyCard*(-1));
+            left: calc(~'50vw + '@width-storyCard/2);
+            padding-left: 10px;
+            color: #fff;
+            @media (mix-width: 767px ) {
+                & {
+                    top: 0;
+                    left: calc(~'50vw - '@width-storyCard/2);
+                }
+            }
+            .storyTagBox-label{
+                margin-right: 5px;
+            }
+        }
+    }
+    
+    .storyCard{
+        margin: 0 auto;
+        margin-top: calc((100vh - @height-storyCard)/2);
+        padding: 1em;
+        height: @height-storyCard;
+        width: @width-storyCard ;
+        background-color: #fff;
+        position: relative;
+        border-radius: 5px;
+        background-size: Contain;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    .storyInfo {
+        color: #000;
+    }
+    .tagBox{
+        position: fixed;
+        top: 0;
+        margin-top: 100px;
+        left: 65%;
+        color: #fff;
+        @media (max-width: 970px) {
+            & {
+                left: 68%;
+            }
+        }
+        @media (max-width: 670px) {
+            & {
+                left: 75%;
+            }
+        }
+        @media (max-width: 490px) {
+            & {
+                top: -7em;
+                margin-bottom: 1em;
+                left: 8em;
+                right: 8em;
+                width: 300px;
+            }
+        }
+        @media (max-width: 400px) {
+            & {
+                top: -7em;
+                margin-bottom: 1em;
+                left: 5em;
+                right: 5em;
+                width: 300px;
+            }
+        }
+        @media (max-width: 360px) {
+            & {
+                top: -7em;
+                margin-bottom: 1em;
+                left: 3em;
+                right: 3em;
+                width: 300px;
+            }
+        }
+        .box {
+            margin-bottom: 1em;
+            .tagBox-text{
+                width: 80px;
+                display: inline-flex;
+            }
+            .tagBox-select-type, .tagBox-select-tag{
+                width: 100px;
+            }
+        }
+    }
+    .tags{
+        margin-bottom: 5px;
+        width: 200px;
+        @media (max-width: 490px) {
+            & {
+                top: 0;
+                margin-top: 1.5em;
+                width: 300px;
+            }
+        }
+    }
+    .ant-tag{
+        margin: 5px;
+    }
+    .userAvatar{
+        margin-bottom: 0.25em;
+        margin-right: 1em;
+    }
+    .userName{
+        display: inline;
+        font-size: 1.3em;
+    }
+    .progress{
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        padding: 1em;
+    }
+    .cardBtn{
+        position: relative;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 1003;
+        height: 100%;
+    }
+    .closeBtn{
+        position: fixed;
+        top: 0;
+        right: 0;
+        font-size: 1.8em;
+        color: #fff;
+        margin: 5px 10px;
+        z-index: 2000;
+    }
+    small{
+        margin-left: 1em;
+        color: gray;
+    }
+}

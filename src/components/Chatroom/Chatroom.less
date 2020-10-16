@@ -1,0 +1,83 @@
+@import '../../mixin/main.less';
+@import '../../routes/Inbox/Inbox.less';
+
+.chatroom{
+    background-color: #fff;
+    height: @height-inbox;
+
+    .title-text {
+        height: 32px;
+        margin-bottom:0;
+        font-weight: 600;
+        font-size: 20px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }  
+
+    .ant-list-header{
+        padding: 16px 24px !important;
+    }
+
+    .ant-spin-container {
+        overflow-y: auto;
+        //list-header:65px, list-footer:64px
+        height: calc(@height-inbox - 129px);
+        
+        .from-me {
+            background-color: rgb(221, 244, 255);
+            border-radius: 20px; 
+            padding: 5px 13px;
+        }
+
+        .from-other {
+            border: 1px solid #ccc; 
+            border-radius: 20px; 
+            padding: 5px 13px;
+        }
+    }
+    
+    .reply-form{
+        width: 100%;
+
+        .msg-input {
+            width: calc(~'100% - 57px');
+        }
+        
+        .send-btn{
+            position: absolute;
+            right: 5px;
+        }
+
+        .textArea{
+            max-height: 32px;
+        }
+
+    }
+
+    .ant-list-footer{
+        position: absolute;
+        bottom: 0;
+        height: 64px;
+        width: 100%;
+        border-top: 1px solid #ccc;
+    }
+    .ant-spin-container{
+        transform:rotateX(180deg);
+                -moz-transform:rotateX(180deg); /* Mozilla */
+                -webkit-transform:rotateX(180deg); /* Safari and Chrome */
+                -ms-transform:rotateX(180deg); /* IE 9+ */
+                -o-transform:rotateX(180deg); /* Opera */
+    }
+    .ant-list-items{
+        transform:rotateX(180deg);
+                -moz-transform:rotateX(180deg); /* Mozilla */
+                -webkit-transform:rotateX(180deg); /* Safari and Chrome */
+                -ms-transform:rotateX(180deg); /* IE 9+ */
+                -o-transform:rotateX(180deg); /* Opera */
+    }
+    .storyImg{
+        padding: 10px 0;
+    }
+      
+}

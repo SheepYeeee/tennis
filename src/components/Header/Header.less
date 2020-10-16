@@ -1,0 +1,83 @@
+@import '../../mixin/main.less';
+
+.header {
+    width           : 100%;
+    padding         : 0 24px !important;
+    background-color: #FFF !important;
+    position: fixed;
+    z-index: 5;
+
+    @media screen {
+      @media (max-width: @sm) {
+        & {
+          padding: 0 12px;
+        }
+      }
+    }
+    .logo{
+        @media (max-width: @sm) { 
+            &{
+                width: 0 !important;
+            }
+        } 
+    }
+
+    .toolIcon{
+        font-size: large;
+        margin-right: 1.5em;
+    }
+    .link{
+        color: #000;
+    }
+
+
+}
+.anticon-search svg{
+  color: #000;
+}
+// .userAvatar{
+//     margin-right: 1em;
+// }
+.userName{
+    margin-top: 0.5em;
+}
+.notifyList,.msgList{
+    width: 300px;
+    max-height: 298.8px;
+    overflow-y: auto;
+    @media (max-width: @sm) {
+        & {
+            width: 270px;
+        }
+    }
+    .title{
+        padding: 0.2em 1em;
+        border-bottom: 0.5px gray solid;
+    }
+    .isread-badge{
+        position: absolute;
+        left: 7px;
+        margin-top: 9px;
+    }
+    .ListContent{
+        padding-left: 5px;
+    }
+    .notifyTimeBox{
+        color: #808080;
+        text-align: right;
+        padding-top: 0.5em;
+        font-style: italic;
+        font-size: smaller;
+    }
+    .notifyBox{
+        padding-top: 0.5em;
+    }
+    .notifyTime{
+        padding-top: 0.3em;
+    }
+    .unRead{
+        background-color: #ddf4ff ;
+    }
+    
+}
+

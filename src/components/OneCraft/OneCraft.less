@@ -1,0 +1,245 @@
+@import '../../mixin/main.less';
+
+/////////
+// OneCraft.less
+/////////
+
+#cardInfo {
+    width: 100%;
+   .cardMask{
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 500;
+        background-color: rgba(0, 0, 0, 0.9);
+        overflow-y: scroll;
+        width: 100vw;
+   }
+   .cardContent{
+        position: absolute;
+        margin: 0 10%;
+        right: 0;
+        left: 0;
+        @media (max-width: @sm) {
+            & {
+                margin: 0 1em;
+            }
+        }
+   }
+   .craftUser{
+        position: relative;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        font-size: 2.1em;
+        color: #fff;
+        margin: 0.7em 0 0.5em 0;
+    }
+   .cardBody{
+        position: relative;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        margin-bottom: 5em;
+        .image-carousel {
+            width: calc(~'40vw - 2em');
+            overflow:hidden;
+            max-height: calc(~'100vh - 2em');
+            // @media (max-width: @md) {
+            //     & {
+            //         width: calc(~'80vw - 4em');
+            //     }
+            // }
+            @media (max-width: @sm) {
+                & {
+                    width: 100%;
+                }
+            }
+            // .image{
+            //     max-height: calc(~'100vh - 2em');
+            //     width: auto;
+            // }
+        }
+    }
+    .isSave{
+        background-color: #828282;
+        border-color: #828282;
+        color: #fff;
+    }
+    .isLike{
+        background-color: #828282;
+        border-color: #828282;
+        color: #fff;
+    }
+    
+    .ant-carousel {
+        .slick-dots-bottom{
+            margin-left: 0 !important;
+            margin-right: 0 !important;
+        }
+    }
+    // .rwdImg{
+    //     display:block;
+    //     width: 100%;
+    //     padding-bottom:100%;
+    //     overflow:hidden;
+    //     background-position: center center;
+    //     background-repeat: no-repeat;
+    // }
+    .craftInfo{
+        padding: 1em;
+    }
+    .craftTitle{
+        font-size: 2em;
+        font-weight:bold;
+        padding: 0 1em;
+    }
+    .info {
+        padding: 2em;
+    }
+    .detail{
+        padding: 0 2em;
+        font-weight:bold;
+    }
+    .userInfo{
+        margin-top: 2em;
+        margin-left: 1em;
+        padding: 2em;
+        border-top: 1px solid #F0F0F0;
+    }
+    .userIntro{
+        padding: 2em;
+    }
+    .cardBtn{
+        position: relative;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 503;
+        height: 100%;
+    }
+    .closeBtn{
+        position: fixed;
+        top: 0;
+        right: 0;
+        font-size: 1.8em;
+        color: #fff;
+        margin: 5px 10px;
+    }
+    .cardBody{
+        // margin: 3em 5em;
+        border-radius: 5px;
+        background-color: #fff;
+        padding: 2em;
+        height: 100%;
+        
+        @media (max-width: @sm) {
+            & {
+                padding: initial;
+            }
+        }
+    }
+    .userAvatar{
+        margin-bottom: 5px;
+        margin-right: 1em;
+    }
+    .workShop{
+        font-weight: bold;
+    }
+    .userName{
+        display: inline;
+        font-weight: bold;
+    }
+    .comment , .countBox{
+        border: 1px solid #F0F0F0;
+        padding: 1em;
+        margin-top: 2em;
+    }
+    .commentBox{
+        padding-bottom: 1em;
+        border-bottom: 1px solid #F0F0F0;
+    }
+    .countBox{
+        padding: 2em;
+        margin-bottom: 1em;
+    }
+    .counts{
+        margin: 1em 0;
+    }
+    .tagBox{
+        border: 1px solid #F0F0F0;
+        padding: 1em;
+        margin-top: 2em;
+        padding: 2em;
+    }
+    .craftTime{
+        font-size: 12px;
+        color: gray;
+    }
+    .addComment .ant-form-item{
+        margin-bottom: 0;
+    }
+    .commentTextArea{
+        width: 100%;
+        padding: 0 1em;
+    }
+    .addCommentAvatar{
+        text-align: center;
+        margin-top: 1em;
+    }
+    .addBtn{
+        text-align: right;
+    }
+    .commentList{
+        margin-top: 1em;
+        
+    }
+    .commentAvatar{
+        text-align: center;
+        margin-top: 1.5em;
+    }
+    .commentInfo{
+        margin: 1.5em 0;
+    }
+    .commmentText{
+        margin: 0.5em 0;
+    }
+    small{
+        font-style: italic;
+        margin-left: 1em;
+    }
+    .commentItem{
+        padding-bottom: 1em;
+    }
+    .beRight{
+        margin-right: 1em;
+        float: right;
+    }
+    .report:hover{
+        color: red;
+    }
+    .tagBtn{
+        margin: 3px;
+    }
+    .projectInfo{
+        color: #a9a9a9;
+        margin-top: 5px;
+        .report:hover{
+            color: red;
+            background-color: #fff;
+        }
+    }
+    .reportTeamModal{
+        .ant-radio-button-wrapper{
+            border: 1px solid #d9d9d9;
+            width: 100%;
+        }
+        .model-textArea{
+            margin-top: 15px;
+        }
+    }
+}
+

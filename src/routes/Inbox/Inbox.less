@@ -1,0 +1,99 @@
+@import '../../mixin/main.less';
+
+//header:64px, padding:20px, list-header:65px, list-footer:64px
+@height-inbox : calc(~'100vh - 104px');
+
+.inboxPage{
+    background-color: #fff;
+    position: relative;
+    .inInbox{
+        .ant-col-xs-0{
+            @media (max-width: @sm) { 
+                &{
+                    display: block;
+                    -webkit-box-flex: 0;
+                    flex: 0 0 100%;
+                    max-width: 100%;
+                }
+            } 
+        }
+        .ant-col-xs-24{
+            @media (max-width: @sm) { 
+                &{
+                    display: none;
+                }
+            } 
+        }
+    }
+    .unRead{
+        background-color: #ddf4ff ;
+    }
+    .inbox {
+        height: 100%;
+        #delRoom{
+            display: none;
+        }
+        .title-text {
+            height: 32px;
+            margin-bottom:0;
+            font-weight: 600;
+            font-size: 20px;
+            overflow-x: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        } 
+        
+        .ant-list-header{
+            padding: 16px 24px !important;
+        }
+
+        .checkbox {
+            overflow: hidden;
+            padding-right: 12px;
+            width: 28px;
+
+            .list-checkbox {
+                margin-bottom: 0;
+            }
+        }
+
+        .msgList-list {
+            height: 100%;
+            background-color: #fff;
+
+            .msgList-title {
+                height:32px;
+            }
+
+            .ant-spin-container {
+                overflow-y: auto;
+                height: calc(@height-inbox - 67px);
+
+                .msg-info {
+                    width: calc(~"100% - 28px");
+                }
+
+                .msgList-item {
+                    padding-right: 12px;
+                    padding-left: 12px;
+                    transition: 1s;
+                    -webkit-transition: 1s;
+                }
+
+                .msgList-item:hover {
+                    padding-right: 12px;
+                    padding-left: 12px;
+                    background-color: rgb(217, 241, 255);
+                }
+
+                .msgList-item-row {
+                    width: 100%;
+                }
+            }
+        }
+
+        .ant-list-split .ant-list-item:last-child {
+            border-bottom: 1px solid #e8e8e8 !important;
+        }
+    }
+}

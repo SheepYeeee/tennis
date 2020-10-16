@@ -1,0 +1,88 @@
+@import '../../mixin/main.less';
+
+.layout {
+  min-height: 100vh;
+  background-color: #fff;
+  .align-center {
+    @media screen {
+      @media (min-width: @xxl) {
+        & {
+          width : 1200px;
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+
+  .layout-content {
+    background-color: #F7F7F7;
+    position: relative;
+    min-height: 520px;
+    padding: 20px;
+    margin: 0;
+    margin-top: 64px;
+  }
+  .bg{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom center;
+  }
+
+  .content2 {
+    background-color: #fff;
+    position: relative;
+    min-height: 600px;
+    padding: 20px;
+    margin: 0;
+  }
+  
+
+  .logo {
+    height: 55px;
+    width: auto;
+
+    @media screen {
+      @media (max-width: @sm) {
+        & {
+          height: auto;
+          width : 95%;
+        }
+      }
+    }
+  }
+
+  .myRow{
+    // background-color:  #fff;
+    padding: 2em 5em;
+  }
+
+}
+
+.trigger {
+  font-size: 18px;
+  line-height: 64px;
+  padding: 0 24px;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.trigger:hover {
+  color: #1890ff;
+}
+
+.logo {
+  text-align: center;
+  height: 10px;
+  color: #fff;
+  font-size: 2em;
+  margin: 16px;
+}
+
+.site-layout .site-layout-background {
+  background: #fff;
+}
+
+.ant-menu svg {
+  margin-right: 2em;
+}
+
