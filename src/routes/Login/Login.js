@@ -51,8 +51,8 @@ const layout = {
 };
 const tailLayout = {
 	wrapperCol: {
-		offset: 10,
-		span: 10
+		offset: 9,
+		span: 6
 	}
 };
 
@@ -69,7 +69,7 @@ export default connect(
     componentDidMount() {
     	window.addEventListener('transitionend',this.handleResize,0);
     }
-	
+
 	// 幫iframe補上title(無障礙AA)
 	handleResize = () => {
 		let iframe = document.getElementById('ssIFrame_google');
@@ -100,7 +100,7 @@ export default connect(
     componentClicked = (data) => {
     	// console.log('data', data);
     }
-	
+
 	// google回傳
 	responseGoogle = (response) => {
 		console.log(response);
@@ -160,7 +160,7 @@ export default connect(
     							// },
     						]}
     					>
-              
+
     						<Input.Password />
     					</Form.Item>
 
@@ -194,21 +194,11 @@ export default connect(
     							cookiePolicy={'single_host_origin'}
 							/>
 							<br />
-							<AppleLogin 
-								render = {
-									renderProps=>(
-										<button onMouseDown={()=>localStorage.setItem('type','apple')} onClick={renderProps.onClick} className='appleBtn' disabled={renderProps.disabled}><AppleFilled />  Apple 登入 </button>
-									)
-								}
-								clientId="tw.com.ksi.craftplus.client" 
-								scope='name email'
-								responseMode = 'form_post'
-								redirectURI="https://craftplus.ksi.com.tw/api/v1/thirdPart/apple/callback"
-							/>
+
     						<p>還沒有會員？ <a href='/#/register'>去註冊</a></p>
     						<p>忘記密碼了嗎? <a href='/#/forget'>忘記密碼</a></p>
     					</div>
-            
+
 
     				</Form>: <div className="spin">
     					<Spin />

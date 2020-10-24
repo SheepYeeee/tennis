@@ -9,7 +9,7 @@ import {
 	Upload
 } from 'antd';
 import { UploadOutlined, InboxOutlined } from '@ant-design/icons';
-import './NewCraft.less';
+import './EditCraft.less';
 import Layout from '../../layout/Layout/Layout';
 
 const mapStateToProps = state => {
@@ -45,7 +45,7 @@ export default connect(
 	mapStateToProps,
 	mapDispatchToProps
 )(
-	class NewCraft extends React.Component {
+	class EditCraft extends React.Component {
     state = {
     	loading: false,
     	uploadImg: []
@@ -105,7 +105,7 @@ export default connect(
     					className='newCraftForm'
     				>
     					<p className='title'>
-							新增貼文
+							編輯貼文
     					</p>
 
     					<Form.Item

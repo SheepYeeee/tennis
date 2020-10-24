@@ -15,6 +15,7 @@ import Member from './routes/Profile/Profile';
 import React from 'react';
 import { router } from 'dva';
 import NewCraft from './routes/Craft/NewCraft';
+import EditCraft from './routes/Craft/EditCraft';
 const { Router, Switch, Route } = router;
 
 
@@ -41,6 +42,7 @@ function RouterConfig({ history }) {
 				<Route path="/report/:type" exact component={Report} />
 				<Route path="/profile/:name" exact component={Member} />
 				<Route path="/newCraft" exact component={NewCraft} />
+				<Route path="/editCraft" exact component={EditCraft} />
 			</Switch>
 		</Router>
 	);

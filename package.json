@@ -83,18 +83,18 @@
     "redbox-react": "^1.4.3",
     "source-map-loader": "^1.0.0"
   },
-  "name": "crafts",
+  "name": "tennis",
   "description": "",
   "version": "1.0.0",
   "main": "theme.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/SheepYeeee/crafts.git"
+    "url": "git+https://github.com/SheepYeeee/tennis.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/SheepYeeee/crafts/issues"
+    "url": "https://github.com/SheepYeeee/tennis/issues"
   },
   "homepage": "./",
   "browserslist": {

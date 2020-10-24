@@ -38,27 +38,20 @@ export default connect(
   render() {
   	const { children } = this.props;
   	return (
-  		<Layout className='layout'>
+  		<Layout className='layout' style={{backgroundImage: 'url(https://cdn.wallpapersafari.com/78/52/5HQJZ1.jpg)'}}>
 
   			<div className="myRow">
-  				<Row >
-            
-  					<Col lg={14} md={8} sm={0} xs={0} className="bg" style={{backgroundImage: 'url(https://museums.moc.gov.tw/Upload/FrontPhoto/e172f186-f1b4-4c86-b4da-326943d9bb27.jpg)'}}>
-            
-  					</Col>
-  					<Col lg={10} md={16} sm={24} xs={24}>
-  						<Content className='content2'>
+
+  						<Content className='content3'>
   							<Row gutter={{ lg: 24, md: 12, sm: 6, xs: 3 }}>
-  								<Col lg={2} md={2} sm={2} xs={1}></Col>
-  								<Col lg={20} md={20} sm={20} xs={22}>
+  								<Col lg={7} md={5} sm={4} xs={3}></Col>
+  								<Col lg={10} md={14} sm={16} xs={18}>
   									{children}
   								</Col>
-  								<Col lg={2} md={2} sm={2} xs={1}></Col>
+  								<Col lg={7} md={5} sm={4} xs={3}></Col>
   							</Row>
   						</Content>
-  					</Col>
-       
-  				</Row>
+
   			</div>
   		</Layout>
   	);

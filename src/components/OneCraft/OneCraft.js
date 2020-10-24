@@ -21,7 +21,8 @@ import {
 	WarningOutlined,
 	PlusOutlined,
 	EditOutlined,
-	MoreOutlined
+	MoreOutlined,
+	DeleteOutlined
 } from '@ant-design/icons';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
@@ -325,7 +326,7 @@ export default class OneCraft extends Component {
             編輯
   			</Menu.Item>
   			<Menu.Item key="3">
-  				<EditOutlined />
+  				<DeleteOutlined />
           刪除
   			</Menu.Item>
   		</Menu>
@@ -402,7 +403,7 @@ export default class OneCraft extends Component {
   				<Row gutter={16}>
   					<Col lg={14} md={14} sm={24} xs={24}>
   						<div className='comment'>
-              
+
   							{localStorage.getItem('token') ?
   								<div className='commentBox'>
   									<Row gutter={8}>
@@ -433,7 +434,7 @@ export default class OneCraft extends Component {
   									</Row>
   								</div>
   								: null}
-                
+
   							<div className='commentList'>
   								{
   									craftInfo.commentList.map((item, index) => {
@@ -491,6 +492,15 @@ export default class OneCraft extends Component {
   							{
   								memberInfo?
   									<Button id={craftInfo.craftId} type="text" icon={<WarningOutlined />} className='report' onClick={this.showProjectModal}>舉報</Button>
+  									:null
+  							}
+
+  							{
+  								memberInfo.userId === craftInfo.userId ?
+  									<div>
+  										<Button id={craftInfo.craftId} type="text" icon={<EditOutlined />} className='report' onClick={this.showProjectModal}>編輯</Button>
+  										<Button id={craftInfo.craftId} type="text" icon={<DeleteOutlined />} className='report' onClick={this.showProjectModal}>刪除</Button>
+  									</div>
   									:null
   							}
   						</div>
